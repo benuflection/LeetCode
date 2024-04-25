@@ -8,7 +8,7 @@ class Solution:
 
         count = {}
         freq = [[] for i in range(len(nums) + 1)]
-
+        # freq creates an array of arrays (buckets) to place either a zero or a value
         for n in nums:
             count[n] = 1 + count.get(n, 0)
         for n, c in count.items():
